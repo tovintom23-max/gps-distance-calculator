@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GPS Distance Calculator</title>
+
+    <!-- Leaflet Map CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        defer>
+    </script>
+
+    <!-- Your JavaScript -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body onload="main()">
+
+    <div class="verticalContainer">
+
+        <h2>GPS Distance Calculator</h2>
+
+        <!-- Current Location -->
+        <div id="loc">
+            Waiting for your location...
+        </div>
+
+        <!-- GPS Accuracy -->
+        <div id="accuracy"></div>
+
+        <!-- A and B buttons -->
+        <div class="horizontalContainer">
+
+            <button id="aBtn" onclick="setA()">
+                A
+            </button>
+
+            <div id="info">
+                Distance will appear here
+            </div>
+
+            <button id="bBtn" onclick="setB()">
+                B
+            </button>
+
+        </div>
+
+        <!-- Reset button -->
+        <button id="resetBtn" onclick="resetLocations()">
+            Reset
+        </button>
+
+        <!-- Status -->
+        <div id="status">
+            Waiting for GPS...
+        </div>
+
+        <!-- Interactive Map -->
+        <h3>Location Map</h3>
+
+        <div id="map"></div>
+
+        <!-- Instructions -->
+        <div id="instructions">
+            Press A at your first location and B at your second location.
+            The map will display both locations.
+        </div>
+
+    </div>
+
+</body>
+</html>
